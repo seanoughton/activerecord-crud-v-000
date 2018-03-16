@@ -60,8 +60,8 @@ def can_find_using_where_clause_and_be_sorted
   # release date descending
   #
   #Client.where("orders_count = ?", params[:orders])
-
-  Movie.where("release_date > ?",2002)
+ #Client.order(created_at: :desc)
+  Movie.where("release_date > ?",2002).order(created_at: :desc)
 end
 
 def can_be_found_updated_and_saved
