@@ -57,7 +57,7 @@ def can_find_using_where_clause_and_be_sorted
   # For this test return all movies released after 2002 and ordered by
   # release date descending
   Movie.where("release_date > ?",2002).reverse_order
-#Movie.where("release_date > 2002").order(release_date: :desc)
+  #Movie.where("release_date > 2002").order(release_date: :desc)
 end
 
 def can_be_found_updated_and_saved
@@ -81,6 +81,8 @@ def can_update_multiple_items_at_once
     Movie.create(title: "Movie_#{i}", release_date: 2000+i)
   end
   Movie.update_all(:title => "A Movie")
+# Movie.all.each{|movie|
+#  movie.update(title: "A Movie")}
 end
 
 def can_destroy_a_single_item
