@@ -88,7 +88,7 @@ end
 def can_destroy_a_single_item
   Movie.create(title: "That One Where the Guy Kicks Another Guy Once")
   item_to_delete = Movie.find_by(:title => "That One Where the Guy Kicks Another Guy Once")
-  item_to_delete.destroy
+  item_to_delete.delete
   #__
 end
 
