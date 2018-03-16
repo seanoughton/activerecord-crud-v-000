@@ -24,11 +24,7 @@ end
 
 def can_be_created_in_a_block(args = {}) #(args = {__})
   Movie.create do |m|
-    title: "The Sting",
-    release_date: 1973,
-    director: "George Roy Hill",
-    lead: "Paul Newman",
-    in_theaters: false
+    __
   end
 end
 
